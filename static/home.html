@@ -1,6 +1,11 @@
+<!doctype html>
 <html>
 <head>
-<title>FP Tracker </title>
+{% if user %}
+	<title> Hello {{user}} FP Tracker </title>
+{% else %}
+	<title> Choose applicatoin or user to proceed </title>
+{% endif %}
 </head>
 <body>
 <h1> This is application to track FP for applications </h1>

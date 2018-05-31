@@ -37,7 +37,8 @@ elif os.path.isfile('vcap-local.json'):
 port = int(os.getenv('PORT', 8000))
 
 @app.route('/')
-def root():
+@app.route('/<user>')
+def root(user=None):
     return app.send_static_file('home.html')
 
 @app.route('/application')

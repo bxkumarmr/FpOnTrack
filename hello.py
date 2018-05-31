@@ -45,7 +45,7 @@ def application():
    return "Here is list of application for FP tracking" 
 @app.route("/user/<name>")
 def user(name):
-   return render_template("user1.html", name=name)
+   return render_template("user.html", name=name)
  
  
 # /* Endpoint to greet and add a new visitor to database.

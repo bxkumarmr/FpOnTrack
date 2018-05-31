@@ -43,10 +43,9 @@ def root():
 @app.route('/application')
 def application():
    return "Here is list of application for FP tracking" 
-@app.route("/user/<name>")
-def user(name):
-   return render_template("user.html", name=name)
- 
+@app.route("/profile/<name>")
+def profile(name):
+   return render_template ("profile.html", name=name)
  
 # /* Endpoint to greet and add a new visitor to database.
 # * Send a POST request to localhost:8000/api/visitors with body

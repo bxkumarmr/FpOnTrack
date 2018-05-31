@@ -44,7 +44,7 @@ def root():
 def application():
    return "Here is list of application for FP tracking:" 
 @app.route("/profile")
-def profile(name):
+def profile():
    return app.send_static_file ('user.html')
 
 # /* Endpoint to greet and add a new visitor to database.

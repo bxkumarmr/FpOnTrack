@@ -42,8 +42,8 @@ def root():
 
 @app.route('/application')
 def application():
-   return "Here is list of application for FP tracking:" 
-@app.route("/profile")
+   return "Here is list of application:" 
+@app.route('/profile')
 def profile():
    return app.send_static_file ('user.html')
 

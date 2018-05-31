@@ -3,8 +3,6 @@ from flask import Flask, render_template, request, jsonify
 import atexit
 import os
 import json
-import numpy
-import pandas
 from os import name
 
 app = Flask(__name__, static_url_path='', template_folder='templates')
@@ -47,7 +45,7 @@ def application():
    return "Here is list of application for FP tracking:" 
 @app.route("/profile/<name>")
 def profile(name):
-   return render_template ("profile.html", name=name)
+   return app.send_static_file ('user.html', name=name)
  
 # /* Endpoint to greet and add a new visitor to database.
 # * Send a POST request to localhost:8000/api/visitors with body

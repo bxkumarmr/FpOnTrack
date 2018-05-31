@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, jsonify
 import atexit
 import os
 import json
+from os import name
 
 app = Flask(__name__, static_url_path='')
 
@@ -42,6 +43,11 @@ def root():
 @app.route('/application')
 def application():
    return "Here is list of application for FP tracking" 
+@app.route("/user/<name>")
+def user(name):
+   return render_template("user.html", name=name)
+ 
+ 
 # /* Endpoint to greet and add a new visitor to database.
 # * Send a POST request to localhost:8000/api/visitors with body
 # * {

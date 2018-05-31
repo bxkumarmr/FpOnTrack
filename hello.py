@@ -43,9 +43,9 @@ def root():
 @app.route('/application')
 def application():
    return "Here is list of application for FP tracking:" 
-@app.route("/profile/name")
+@app.route("/profile")
 def profile(name):
-   return app.send_static_file ('user.html', name)
+   return app.send_static_file ('user.html')
 
 # /* Endpoint to greet and add a new visitor to database.
 # * Send a POST request to localhost:8000/api/visitors with body

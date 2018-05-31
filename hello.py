@@ -42,7 +42,7 @@ def root():
 
 @app.route('/application')
 def application():
-   return "Here is list of application for FP tracking" 
+   return "Here is list of application for FP tracking:" 
 @app.route("/profile/<name>")
 def profile(name):
    return render_template ("profile.html", name=name)

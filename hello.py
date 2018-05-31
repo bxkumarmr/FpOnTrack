@@ -39,6 +39,9 @@ port = int(os.getenv('PORT', 8000))
 def root():
     return app.send_static_file('home.html')
 
+@app.route('/application')
+def application():
+   return "Here is list of application for FP tracking" 
 # /* Endpoint to greet and add a new visitor to database.
 # * Send a POST request to localhost:8000/api/visitors with body
 # * {

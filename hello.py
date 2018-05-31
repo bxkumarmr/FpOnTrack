@@ -5,7 +5,7 @@ import os
 import json
 from os import name
 
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__, static_url_path='', template_folder='templates')
 
 db_name = 'mydb'
 client = None

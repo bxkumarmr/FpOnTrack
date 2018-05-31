@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, jsonify
 import atexit
 import os
 import json
+import numpy
 from os import name
 
 app = Flask(__name__, static_url_path='', template_folder='templates')
